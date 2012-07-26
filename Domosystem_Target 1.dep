@@ -1,0 +1,2 @@
+Dependencies for Project 'Domosystem', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_stm32f4xx.s)(0x4F854F64)(--cpu Cortex-M4.fp -g --apcs=interwork -I D:\PROGRAMACION\Keil\ARM\RV31\Inc -I D:\PROGRAMACION\Keil\ARM\CMSIS\Include -I D:\PROGRAMACION\Keil\ARM\Inc\ST\STM32F4xx --list "startup_stm32f4xx.lst" --xref -o "startup_stm32f4xx.o" --depend "startup_stm32f4xx.d")

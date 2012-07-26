@@ -1,0 +1,337 @@
+###############################################################################
+#                                                                             #
+# IAR ELF Linker V6.40.1.53790/W32 for ARM              09/Jun/2012  19:09:53 #
+# Copyright 2007-2012 IAR Systems AB.                                         #
+#                                                                             #
+#    Output file  =  D:\3.2 LCD\Debug\Exe\c.out                               #
+#    Map file     =  D:\3.2 LCD\Debug\List\c.map                              #
+#    Command line =  "D:\3.2 LCD\Debug\Obj\AsciiLib.o" "D:\3.2                #
+#                    LCD\Debug\Obj\SSD1289.o" "D:\3.2 LCD\Debug\Obj\delay.o"  #
+#                    "D:\3.2 LCD\Debug\Obj\main.o" "D:\3.2                    #
+#                    LCD\Debug\Obj\misc.o" "D:\3.2                            #
+#                    LCD\Debug\Obj\startup_stm32f4xx.o" "D:\3.2               #
+#                    LCD\Debug\Obj\stm32f4xx_adc.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_can.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_crc.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_cryp.o" "D:\3.2                  #
+#                    LCD\Debug\Obj\stm32f4xx_cryp_aes.o" "D:\3.2              #
+#                    LCD\Debug\Obj\stm32f4xx_cryp_des.o" "D:\3.2              #
+#                    LCD\Debug\Obj\stm32f4xx_cryp_tdes.o" "D:\3.2             #
+#                    LCD\Debug\Obj\stm32f4xx_dac.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_dbgmcu.o" "D:\3.2                #
+#                    LCD\Debug\Obj\stm32f4xx_dcmi.o" "D:\3.2                  #
+#                    LCD\Debug\Obj\stm32f4xx_dma.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_exti.o" "D:\3.2                  #
+#                    LCD\Debug\Obj\stm32f4xx_flash.o" "D:\3.2                 #
+#                    LCD\Debug\Obj\stm32f4xx_fsmc.o" "D:\3.2                  #
+#                    LCD\Debug\Obj\stm32f4xx_gpio.o" "D:\3.2                  #
+#                    LCD\Debug\Obj\stm32f4xx_hash.o" "D:\3.2                  #
+#                    LCD\Debug\Obj\stm32f4xx_hash_md5.o" "D:\3.2              #
+#                    LCD\Debug\Obj\stm32f4xx_hash_sha1.o" "D:\3.2             #
+#                    LCD\Debug\Obj\stm32f4xx_i2c.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_it.o" "D:\3.2                    #
+#                    LCD\Debug\Obj\stm32f4xx_iwdg.o" "D:\3.2                  #
+#                    LCD\Debug\Obj\stm32f4xx_pwr.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_rcc.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_rng.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_rtc.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_sdio.o" "D:\3.2                  #
+#                    LCD\Debug\Obj\stm32f4xx_spi.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_syscfg.o" "D:\3.2                #
+#                    LCD\Debug\Obj\stm32f4xx_tim.o" "D:\3.2                   #
+#                    LCD\Debug\Obj\stm32f4xx_usart.o" "D:\3.2                 #
+#                    LCD\Debug\Obj\stm32f4xx_wwdg.o" "D:\3.2                  #
+#                    LCD\Debug\Obj\system_stm32f4xx.o" "D:\3.2                #
+#                    LCD\Debug\Obj\touch_7846.o" -o "D:\3.2                   #
+#                    LCD\Debug\Exe\c.out" --redirect _Printf=_PrintfSmall     #
+#                    --redirect _Scanf=_ScanfSmall --map "D:\3.2              #
+#                    LCD\Debug\List\c.map" --config "C:\Program Files\IAR     #
+#                    Systems\Embedded Workbench 6.4                           #
+#                    Evaluation\arm\config\linker\ST\stm32f407xG.icf"         #
+#                    --semihosting --entry __iar_program_start --redirect     #
+#                    __iar_sh_stdout=__iar_sh_stdout_swo --inline             #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench 6.4     #
+#                    Evaluation\arm\CMSIS\Lib\IAR\iar_cortexM4lf_math.a"      #
+#                    --merge_duplicate_sections --vfe                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x080fffff] { ro };
+"P2":  place in [from 0x20000000 to 0x2001ffff] { rw, block CSTACK, block HEAP };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A1":                                      0x188
+  .intvec            ro code  0x08000000   0x188  startup_stm32f4xx.o [1]
+                            - 0x08000188   0x188
+
+"P1":                                     0x15dc
+  .text              ro code  0x08000188   0x5c0  SSD1289.o [1]
+  .text              ro code  0x08000748    0x50  delay.o [1]
+  .text              ro code  0x08000798   0x148  stm32f4xx_tim.o [1]
+  .text              ro code  0x080008e0    0x84  stm32f4xx_rcc.o [1]
+  .text              ro code  0x08000964    0xb6  stm32f4xx_gpio.o [1]
+  .text              ro code  0x08000a1a    0x2e  copy_init3.o [5]
+  .text              ro code  0x08000a48    0xe4  stm32f4xx_fsmc.o [1]
+  .text              ro code  0x08000b2c   0x4ac  touch_7846.o [1]
+  .text              ro code  0x08000fd8    0xce  stm32f4xx_spi.o [1]
+  .text              ro code  0x080010a6    0x22  zero_init3.o [5]
+  .text              ro code  0x080010c8    0x28  stm32f4xx_syscfg.o [1]
+  .text              ro code  0x080010f0    0x90  stm32f4xx_exti.o [1]
+  .text              ro code  0x08001180    0x6c  misc.o [1]
+  .text              ro code  0x080011ec    0x2c  I32ToDbl.o [4]
+  .text              ro code  0x08001218   0x246  DblDiv.o [4]
+  .text              ro code  0x08001460    0x4c  DblToI32.o [4]
+  .text              ro code  0x080014ac    0xe8  system_stm32f4xx.o [1]
+  .text              ro code  0x08001594    0x80  main.o [1]
+  .text              ro code  0x08001614    0x3e  stm32f4xx_it.o [1]
+  .text              ro code  0x08001654    0x28  data_init3.o [5]
+  .iar.init_table    const    0x0800167c    0x24  - Linker created -
+  .text              ro code  0x080016a0    0x1a  fpinit_M.o [4]
+  .text              ro code  0x080016bc    0x16  cmain.o [5]
+  .text              ro code  0x080016d2     0x4  exit.o [3]
+  .text              ro code  0x080016d8     0xa  cexit.o [5]
+  .text              ro code  0x080016e4    0x14  exit.o [6]
+  .text              ro code  0x080016f8    0x10  startup_stm32f4xx.o [1]
+  .text              ro code  0x08001708     0xc  cstartup_M.o [5]
+  .text              ro code  0x08001714     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08001718     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x0800171c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08001720     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08001724     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08001728     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x0800172c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08001730     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08001734     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08001738     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x0800173c     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08001740     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08001744     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08001748     0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x0800174c     0x4  startup_stm32f4xx.o [1]
+  .rodata            const    0x08001750     0x0  zero_init3.o [5]
+  .rodata            const    0x08001750     0x0  copy_init3.o [5]
+  Initializer bytes  ro data  0x08001750    0x14  <for P2 s0>
+                            - 0x08001764  0x15dc
+
+"P2", part 1 of 3:                          0x14
+  P2 s0                       0x20000000    0x14  <Init block>
+    .data            inited   0x20000000    0x14  system_stm32f4xx.o [1]
+                            - 0x20000014    0x14
+
+"P2", part 2 of 3:                          0x44
+  .bss               zero     0x20000014    0x24  SSD1289.o [1]
+  .bss               zero     0x20000038    0x19  touch_7846.o [1]
+  .bss               zero     0x20000054     0x4  delay.o [1]
+                            - 0x20000058    0x44
+
+"P2", part 3 of 3:                        0x2000
+  CSTACK                      0x20000058  0x2000  <Block>
+    CSTACK           uninit   0x20000058  0x2000  <Block tail>
+                            - 0x20002058  0x2000
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x44:
+          0x20000014  0x44
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x14:
+          0x08001750  0x14
+    1 destination range, total size 0x14:
+          0x20000000  0x14
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module               ro code  ro data  rw data
+    ------               -------  -------  -------
+D:\3.2 LCD\Debug\Obj: [1]
+    SSD1289.o              1 472                36
+    delay.o                   80                 4
+    main.o                   128
+    misc.o                   108
+    startup_stm32f4xx.o      468
+    stm32f4xx_exti.o         144
+    stm32f4xx_fsmc.o         228
+    stm32f4xx_gpio.o         182
+    stm32f4xx_it.o            62
+    stm32f4xx_rcc.o          132
+    stm32f4xx_spi.o          206
+    stm32f4xx_syscfg.o        40
+    stm32f4xx_tim.o          328
+    system_stm32f4xx.o       232       20       20
+    touch_7846.o           1 196                25
+    ----------------------------------------------
+    Total:                 5 006       20       85
+
+command line: [2]
+    ----------------------------------------------
+    Total:
+
+dl7M_tlf.a: [3]
+    exit.o                     4
+    ----------------------------------------------
+    Total:                     4
+
+m7M_tlv.a: [4]
+    DblDiv.o                 582
+    DblToI32.o                76
+    I32ToDbl.o                44
+    fpinit_M.o                26
+    ----------------------------------------------
+    Total:                   728
+
+rt7M_tl.a: [5]
+    cexit.o                   10
+    cmain.o                   22
+    copy_init3.o              46
+    cstartup_M.o              12
+    data_init3.o              40
+    zero_init3.o              34
+    ----------------------------------------------
+    Total:                   164
+
+shb_l.a: [6]
+    exit.o                    20
+    ----------------------------------------------
+    Total:                    20
+
+    Gaps                      10                 3
+    Linker created                     36    8 192
+--------------------------------------------------
+    Grand Total:           5 932       56    8 280
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+?main                   0x080016bd         Code  Gb  cmain.o [5]
+AHBPrescTable           0x20000004   0x10  Data  Gb  system_stm32f4xx.o [1]
+BusFault_Handler        0x0800161b    0x2  Code  Gb  stm32f4xx_it.o [1]
+CSTACK$$Base            0x20000058          --   Gb  - Linker created -
+CSTACK$$Limit           0x20002058          --   Gb  - Linker created -
+Channel3Pulse           0x20000036    0x2  Data  Gb  SSD1289.o [1]
+Convert_Pos             0x08000f57   0x5a  Code  Gb  touch_7846.o [1]
+DebugMon_Handler        0x08001621    0x2  Code  Gb  stm32f4xx_it.o [1]
+Delay                   0x08000749   0x3c  Code  Gb  delay.o [1]
+EXTI0_IRQHandler        0x0800162b    0x2  Code  Gb  stm32f4xx_it.o [1]
+EXTI9_5_IRQHandler      0x08000f3b   0x1c  Code  Gb  touch_7846.o [1]
+EXTI_ClearITPendingBit  0x08001171    0x6  Code  Gb  stm32f4xx_exti.o [1]
+EXTI_GetITStatus        0x0800115b   0x16  Code  Gb  stm32f4xx_exti.o [1]
+EXTI_Init               0x080010f1   0x6a  Code  Gb  stm32f4xx_exti.o [1]
+FSMC_NORSRAMCmd         0x08000b09   0x1a  Code  Gb  stm32f4xx_fsmc.o [1]
+FSMC_NORSRAMInit        0x08000a49   0xc0  Code  Gb  stm32f4xx_fsmc.o [1]
+GPIO_Init               0x08000965   0x80  Code  Gb  stm32f4xx_gpio.o [1]
+GPIO_PinAFConfig        0x080009f3   0x28  Code  Gb  stm32f4xx_gpio.o [1]
+GPIO_ReadInputDataBit   0x080009e5    0xe  Code  Gb  stm32f4xx_gpio.o [1]
+HardFault_Handler       0x08001617    0x2  Code  Gb  stm32f4xx_it.o [1]
+LCD_Clear               0x08000463   0x28  Code  Gb  SSD1289.o [1]
+LCD_CtrlLinesConfig     0x080004c9  0x128  Code  Gb  SSD1289.o [1]
+LCD_FSMCConfig          0x080005f5   0x7c  Code  Gb  SSD1289.o [1]
+LCD_Init                0x08000189  0x2da  Code  Gb  SSD1289.o [1]
+MemManage_Handler       0x08001619    0x2  Code  Gb  stm32f4xx_it.o [1]
+NMI_Handler             0x08001615    0x2  Code  Gb  stm32f4xx_it.o [1]
+NVIC_Init               0x08001181   0x5c  Code  Gb  misc.o [1]
+Pen_Point               0x20000038   0x18  Data  Gb  touch_7846.o [1]
+PendSV_Handler          0x08001623    0x2  Code  Gb  stm32f4xx_it.o [1]
+Pixel                   0x0800048b   0x30  Code  Gb  SSD1289.o [1]
+RCC_AHB1PeriphClockCmd  0x080008e1   0x12  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_AHB3PeriphClockCmd  0x080008f3   0x12  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_APB1PeriphClockCmd  0x08000905   0x12  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_APB1PeriphResetCmd  0x08000929   0x12  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_APB2PeriphClockCmd  0x08000917   0x12  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_APB2PeriphResetCmd  0x0800093b   0x12  Code  Gb  stm32f4xx_rcc.o [1]
+Read_Ads7846            0x08000dc5  0x176  Code  Gb  touch_7846.o [1]
+Region$$Table$$Base     0x0800167c          --   Gb  - Linker created -
+Region$$Table$$Limit    0x080016a0          --   Gb  - Linker created -
+Reset_Handler           0x080016f9         Code  Wk  startup_stm32f4xx.o [1]
+SDIO_IRQHandler         0x08001629    0x2  Code  Gb  stm32f4xx_it.o [1]
+SPI_Cmd                 0x08001085   0x14  Code  Gb  stm32f4xx_spi.o [1]
+SPI_I2S_DeInit          0x08000fd9   0x68  Code  Gb  stm32f4xx_spi.o [1]
+SPI_I2S_GetFlagStatus   0x08001099    0xe  Code  Gb  stm32f4xx_spi.o [1]
+SPI_Init                0x08001041   0x38  Code  Gb  stm32f4xx_spi.o [1]
+SVC_Handler             0x0800161f    0x2  Code  Gb  stm32f4xx_it.o [1]
+SYSCFG_EXTILineConfig   0x080010c9   0x24  Code  Gb  stm32f4xx_syscfg.o [1]
+SysTick_Handler         0x08001625    0x4  Code  Gb  stm32f4xx_it.o [1]
+SystemCoreClock         0x20000000    0x4  Data  Gb  system_stm32f4xx.o [1]
+SystemInit              0x080014ad   0xd0  Code  Gb  system_stm32f4xx.o [1]
+TIM2_IRQHandler         0x0800162f   0x24  Code  Gb  stm32f4xx_it.o [1]
+TIM3_IRQHandler         0x0800162d    0x2  Code  Gb  stm32f4xx_it.o [1]
+TIM_ClearITPendingBit   0x080008db    0x6  Code  Gb  stm32f4xx_tim.o [1]
+TIM_Cmd                 0x08000813   0x14  Code  Gb  stm32f4xx_tim.o [1]
+TIM_Config              0x08000671   0xc0  Code  Gb  SSD1289.o [1]
+TIM_CtrlPWMOutputs      0x080008b1   0x16  Code  Gb  stm32f4xx_tim.o [1]
+TIM_GetITStatus         0x080008c7   0x14  Code  Gb  stm32f4xx_tim.o [1]
+TIM_OC3Init             0x08000827   0x6e  Code  Gb  stm32f4xx_tim.o [1]
+TIM_OCInitStructure     0x20000014   0x14  Data  Gb  SSD1289.o [1]
+TIM_TimeBaseInit        0x08000799   0x7a  Code  Gb  stm32f4xx_tim.o [1]
+TIM_TimeBaseStructure   0x20000028    0xc  Data  Gb  SSD1289.o [1]
+TPReadX                 0x08000b2d   0xa0  Code  Gb  touch_7846.o [1]
+TPReadY                 0x08000bcd   0xa0  Code  Gb  touch_7846.o [1]
+TimerPeriod             0x20000034    0x2  Data  Gb  SSD1289.o [1]
+TimingDelay             0x20000054    0x4  Data  Lc  delay.o [1]
+TimingDelay_Decrement   0x08000785    0xe  Code  Gb  delay.o [1]
+UsageFault_Handler      0x0800161d    0x2  Code  Gb  stm32f4xx_it.o [1]
+WWDG_IRQHandler         0x08001739         Code  Wk  startup_stm32f4xx.o [1]
+__aeabi_d2iz            0x08001461         Code  Gb  DblToI32.o [4]
+__aeabi_ddiv            0x08001219         Code  Gb  DblDiv.o [4]
+__aeabi_i2d             0x080011ed         Code  Gb  I32ToDbl.o [4]
+__cmain                 0x080016bd         Code  Gb  cmain.o [5]
+__exit                  0x080016e5   0x14  Code  Gb  exit.o [6]
+__iar_copy_init3        0x08000a1b   0x2e  Code  Gb  copy_init3.o [5]
+__iar_d2uiz             0x0800148d         Code  Gb  DblToI32.o [4]
+__iar_data_init3        0x08001655   0x28  Code  Gb  data_init3.o [5]
+__iar_init_vfp          0x080016a1         Code  Gb  fpinit_M.o [4]
+__iar_program_start     0x08001709         Code  Gb  cstartup_M.o [5]
+__iar_ui2d              0x08001201         Code  Gb  I32ToDbl.o [4]
+__iar_zero_init3        0x080010a7   0x22  Code  Gb  zero_init3.o [5]
+__vector_table          0x08000000         Data  Gb  startup_stm32f4xx.o [1]
+_call_main              0x080016c9         Code  Gb  cmain.o [5]
+_exit                   0x080016d9         Code  Gb  cexit.o [5]
+_main                   0x080016cf         Code  Gb  cmain.o [5]
+exit                    0x080016d3    0x4  Code  Gb  exit.o [3]
+flag                    0x20000050    0x1  Data  Gb  touch_7846.o [1]
+main                    0x08001595   0x76  Code  Gb  main.o [1]
+touch_init              0x08000c6d  0x156  Code  Gb  touch_7846.o [1]
+
+
+[1] = D:\3.2 LCD\Debug\Obj
+[2] = command line
+[3] = dl7M_tlf.a
+[4] = m7M_tlv.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  5 932 bytes of readonly  code memory
+     56 bytes of readonly  data memory
+  8 280 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
